@@ -36,33 +36,75 @@ function calculateRaisedToPower() {
 }
 
 function calculateSin() {
-    const value = parseFloat(document.getElementById('display').value);
-    document.getElementById('display').value = Math.sin(value);
+    const inputValue = parseFloat(document.getElementById('display').value);
+    
+    if (isNaN(inputValue)) {
+        document.getElementById('display').value = 'Error: Invalid input';
+        return;
+    }
+    
+    const result = Math.sin(inputValue);
+    document.getElementById('display').value = result;
 }
 
 function calculateCos() {
-    const value = parseFloat(document.getElementById('display').value);
-    document.getElementById('display').value = Math.cos(value);
+    const inputValue = parseFloat(document.getElementById('display').value);
+    
+    if (isNaN(inputValue)) {
+        document.getElementById('display').value = 'Error: Invalid input';
+        return;
+    }
+    
+    const result = Math.cos(inputValue);
+    document.getElementById('display').value = result;
 }
 
 function calculateTan() {
-    const value = parseFloat(document.getElementById('display').value);
-    document.getElementById('display').value = Math.tan(value);
+    const inputValue = parseFloat(document.getElementById('display').value);
+    
+    if (isNaN(inputValue)) {
+        document.getElementById('display').value = 'Error: Invalid input';
+        return;
+    }
+    
+    const result = Math.tan(inputValue);
+    document.getElementById('display').value = result;
 }
 
 function calculateCot() {
-    const value = parseFloat(document.getElementById('display').value);
-    document.getElementById('display').value = 1 / Math.tan(value);
+    const inputValue = parseFloat(document.getElementById('display').value);
+    
+    if (isNaN(inputValue) || inputValue === Math.PI/2) {
+        document.getElementById('display').value = 'Error: Invalid input';
+        return;
+    }
+    
+    const result = 1 / Math.tan(inputValue);
+    document.getElementById('display').value = result;
 }
 
 function calculateSec() {
-    const value = parseFloat(document.getElementById('display').value);
-    document.getElementById('display').value = 1 / Math.cos(value);
+    const inputValue = parseFloat(document.getElementById('display').value);
+    
+    if (isNaN(inputValue) || inputValue === Math.PI/2 || inputValue === -Math.PI/2) {
+        document.getElementById('display').value = 'Error: Invalid input';
+        return;
+    }
+    
+    const result = 1 / Math.cos(inputValue);
+    document.getElementById('display').value = result;
 }
 
 function calculateCosec() {
-    const value = parseFloat(document.getElementById('display').value);
-    document.getElementById('display').value = 1 / Math.sin(value);
+    const inputValue = parseFloat(document.getElementById('display').value);
+    
+    if (isNaN(inputValue) || inputValue === 0 || inputValue === Math.PI || inputValue === -Math.PI) {
+        document.getElementById('display').value = 'Error: Invalid input';
+        return;
+    }
+    
+    const result = 1 / Math.sin(inputValue);
+    document.getElementById('display').value = result;
 }
 
 function calculateLog() {
