@@ -9,7 +9,7 @@
 }
 
 .display {
-    width: 100%;
+    width: 99%;
     margin-bottom: 10px;
     padding: 15px;
     font-size: 24px;
@@ -43,6 +43,9 @@ button.remove {
     font-weight: bold;
     width: calc(50% - 5px); /* Set width to fit 50% of the calculator with spacing */
     margin-right: 5px; /* Add some spacing between buttons */
+display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two columns for buttons */
+  
 }
 
 @media (max-width: 768px) {
