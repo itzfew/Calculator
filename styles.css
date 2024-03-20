@@ -1,55 +1,51 @@
 .calculator {
     max-width: 300px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 20px;
-    border-radius: 10px;
-    background-color: #f0f0f0; /* Light gray background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    border-radius: 15px;
+    background: #a6a6a6; /* Light gray background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Outer shadow effect */
 }
 
 .display {
-    width: calc(100% - 40px); /* Adjusted width for buttons */
+    width: 100%;
     margin-bottom: 10px;
-    padding: 10px;
-    font-size: 18px;
-    border: none; /* No border for display */
-    border-radius: 5px; /* Rounded corners */
-    background-color: white; /* White background */
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Inner shadow effect */
+    padding: 15px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background: #e6e6e6; /* Light gray background for display */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Inner shadow effect */
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    gap: 10px;
 }
 
 button {
-    padding: 10px;
-    font-size: 16px;
+    padding: 15px;
+    font-size: 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    background-color: #e0e0e0;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background: #d9d9d9; /* Lighter gray background for buttons */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transition: all 0.3s ease; /* Smooth transition on hover */
 }
 
 button.remove {
-    background-color: #ff5252; /* Dim red color for remove button */
-    color: white; /* White text color */
-    font-size: 14px; /* Smaller font size */
-    padding: 12px 20px; /* Adjusted padding */
-    border: 2px solid #cc0000; /* Dim red border */
-    border-radius: 5px; /* Rounded corners */
-    font-weight: bold; /* Bold text */
-    margin-right: 10px; /* Add some space between buttons */
+    background: #ff6666; /* Red color for remove button */
+    color: white;
+    font-weight: bold;
 }
 
 button.remove:hover {
-    background-color: #ff0000; /* Darker red on hover */
-    border-color: #ff0000; /* Darker red border on hover */
+    background: #ff3333; /* Darker red on hover */
 }
 
 button:hover {
-    background-color: #ccc;
+    transform: translateY(2px); /* Add slight lift on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Enhance shadow effect */
 }
