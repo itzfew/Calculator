@@ -3,38 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Wikipedia</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Simple Wikipedia</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <article>
-            <h2 id="home">Home</h2>
-            <p>Welcome to Simple Wikipedia!</p>
-            <p>This is a simple wiki site created using HTML, CSS, and JavaScript.</p>
-        </article>
-        <article>
-            <h2 id="about">About</h2>
-            <p>This site aims to provide easy access to information on various topics in a user-friendly format.</p>
-        </article>
-        <article>
-            <h2 id="contact">Contact</h2>
-            <p>If you have any questions or suggestions, please contact us at example@example.com.</p>
-        </article>
-    </main>
-    <footer>
-        <p>&copy; 2024 Simple Wikipedia</p>
-    </footer>
+    <div class="calculator">
+        <input type="text" id="display" class="display" readonly>
+        <div class="buttons">
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('*')">×</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendToDisplay('/')">÷</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="calculateSquareRoot()">√</button>
+            <button onclick="calculatePercentage()">%</button>
+            <button onclick="calculateRaisedToPower()">^</button>
+            <button onclick="calculateSin()">sin</button>
+            <button onclick="calculateCos()">cos</button>
+            <button onclick="calculateTan()">tan</button>
+            <button onclick="calculateCot()">cot</button>
+            <button onclick="calculateSec()">sec</button>
+            <button onclick="calculateCosec()">cosec</button>
+            <button onclick="calculateLog()">log</button>
+            <button onclick="calculateFactorial()">!</button>
+            <button onclick="calculateNaturalLog()">ln</button>
+            <button onclick="appendToDisplay('Math.PI')">π</button>
+            <button onclick="appendToDisplay('Math.E')">e</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
-      </html>
+</html>
