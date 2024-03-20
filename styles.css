@@ -40,28 +40,12 @@ button.remove {
     background: #ff6666; /* Red color for remove button */
     color: white;
     font-weight: bold;
+    width: 50%; /* Set width to fit 50% of the calculator */
+    margin-right: 5px; /* Add some spacing between buttons */
 }
 
-button.remove:hover {
-    background: #ff3333; /* Darker red on hover */
-}
-
-button:hover {
-    transform: translateY(2px); /* Add slight lift on hover */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Enhance shadow effect */
-}
-
-/* Media queries */
 @media (max-width: 768px) {
-    .calculator {
-        max-width: 250px;
-    }
-    
-    .display {
-        font-size: 20px;
-    }
-
-    button {
-        font-size: 18px;
+    button.remove {
+        width: 100%; /* Full width on smaller screens */
     }
 }
