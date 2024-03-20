@@ -6,6 +6,11 @@ function clearDisplay() {
     document.getElementById('display').value = '';
 }
 
+function removeLastCharacter() {
+    const displayValue = document.getElementById('display').value;
+    document.getElementById('display').value = displayValue.slice(0, -1);
+}
+
 function calculate() {
     const result = eval(document.getElementById('display').value);
     document.getElementById('display').value = result;
