@@ -41,8 +41,7 @@ button.remove {
     background: #ff6666; /* Red color for remove button */
     color: white;
     font-weight: bold;
-    width: calc(50% - 5px); /* Set width to fit 50% of the calculator with spacing */
-    margin-right: 5px; /* Add some spacing between buttons */
+        margin-right: 5px; /* Add some spacing between buttons */
 }
 
 @media (max-width: 768px) {
