@@ -125,3 +125,47 @@ function calculateNaturalLog() {
     const value = parseFloat(document.getElementById('display').value);
     document.getElementById('display').value = Math.log(value);
 }
+
+
+
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        while (true) {
+            System.out.println("Enter an expression or 'quit' to exit:");
+            String input = scanner.nextLine();
+            
+            if (input.equalsIgnoreCase("quit")) {
+                break;
+            }
+            
+            try {
+                double result = evaluateExpression(input);
+                System.out.println("Result: " + result);
+            } catch (Exception e) {
+                System.out.println("Invalid input. Please enter a valid expression.");
+            }
+        }
+        
+        scanner.close();
+    }
+    
+    public static double evaluateExpression(String expression) throws Exception {
+        // Replace trigonometric functions with their corresponding Java Math functions
+        expression = expression.replaceAll("sin", "Math.sin");
+        expression = expression.replaceAll("cos", "Math.cos");
+        expression = expression.replaceAll("tan", "Math.tan");
+        expression = expression.replaceAll("cot", "1/Math.tan");
+        expression = expression.replaceAll("sec", "1/Math.cos");
+        expression = expression.replaceAll("cosec", "1/Math.sin");
+        
+        // Evaluate the expression using Java's built-in JavaScript engine
+        return (double) new javax.script.ScriptEngineManager()
+                                    .getEngineByName("JavaScript")
+                                    .eval(expression);
+    }
+                            }
