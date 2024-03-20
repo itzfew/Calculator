@@ -8,7 +8,7 @@
 }
 
 .display {
-    width: 100%;
+    width: calc(100% - 40px); /* Adjusted width for buttons */
     margin-bottom: 10px;
     padding: 10px;
     font-size: 18px;
