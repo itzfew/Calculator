@@ -36,69 +36,41 @@ function calculateRaisedToPower() {
 }
 
 
-import java.util.Scanner;
-
-public class MainClass {
-
-    public static void main(String args[]){
-        Scanner NumInput = new Scanner(System.in);
-        double firstNum = 0;
-        double secondNum = 0;
-        double result = 0;
-        System.out.println("Enter first number: ");
-        firstNum = NumInput.nextDouble() ;
-        System.out.println("Enter operator: ");
-        String amalgar = NumInput.next();
-            if (amalgar == "sin" || amalgar == "cos" || amalgar == "tan" || amalgar == "cot"){
-            switch(amalgar){
-        case "sin":
-            result = Math.toRadians(Math.sin(firstNum));
-            break;
-        case "cos":
-            result = Math.toRadians(Math.cos(firstNum));
-            break;
-        case "tan":
-            result = Math.toRadians(Math.tan(firstNum));
-            break;
-        case "cot":
-            result = (Math.toRadians(Math.cos(firstNum))/Math.toRadians(Math.sin(firstNum)));
-            break;
-
-        default : 
-            break;
-
-
-
-            }
-            System.out.println(Math.toRadians(result));
-            }
-            else
-
-                System.out.println("Enter second number: ");
-                secondNum = NumInput.nextDouble();  
-            switch (amalgar){
-        case "+":
-            result = firstNum + secondNum;
-            break;
-        case "-":
-            result = firstNum - secondNum;
-            break;
-        case "*":
-            result = firstNum * secondNum;
-            break;
-        case "/":
-            result = firstNum / secondNum;
-            break;
-
-        default:
-            System.out.println("nemifahmam chi neveeshti");
+function calculateSin() {
+            var angle = parseFloat(prompt("Enter the angle in degrees:"));
+            var result = Math.sin(angle * Math.PI / 180);
+            alert("sin(" + angle + ") = " + result);
         }
 
-            System.out.println(result);
+        function calculateCos() {
+            var angle = parseFloat(prompt("Enter the angle in degrees:"));
+            var result = Math.cos(angle * Math.PI / 180);
+            alert("cos(" + angle + ") = " + result);
+        }
 
-    }
-}
+        function calculateTan() {
+            var angle = parseFloat(prompt("Enter the angle in degrees:"));
+            var result = Math.tan(angle * Math.PI / 180);
+            alert("tan(" + angle + ") = " + result);
+        }
 
+        function calculateCot() {
+            var angle = parseFloat(prompt("Enter the angle in degrees:"));
+            var result = 1 / Math.tan(angle * Math.PI / 180);
+            alert("cot(" + angle + ") = " + result);
+        }
+
+        function calculateSec() {
+            var angle = parseFloat(prompt("Enter the angle in degrees:"));
+            var result = 1 / Math.cos(angle * Math.PI / 180);
+            alert("sec(" + angle + ") = " + result);
+        }
+
+        function calculateCosec() {
+            var angle = parseFloat(prompt("Enter the angle in degrees:"));
+            var result = 1 / Math.sin(angle * Math.PI / 180);
+            alert("cosec(" + angle + ") = " + result);
+        }
 
 function calculateLog() {
     const value = parseFloat(document.getElementById('display').value);
