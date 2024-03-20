@@ -12,8 +12,12 @@ function removeLastCharacter() {
 }
 
 function calculate() {
-    const result = eval(document.getElementById('display').value);
-    document.getElementById('display').value = result;
+    try {
+        const result = eval(document.getElementById('display').value);
+        document.getElementById('display').value = result;
+    } catch (error) {
+        document.getElementById('display').value = 'Error';
+    }
 }
 
 function calculateSquareRoot() {
