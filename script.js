@@ -1,5 +1,6 @@
 function appendToDisplay(value) {
-    document.getElementById('display').value += value;
+    const display = document.getElementById('display');
+    display.value += value;
 }
 
 function clearDisplay() {
@@ -7,13 +8,19 @@ function clearDisplay() {
 }
 
 function removeLastCharacter() {
-    const displayValue = document.getElementById('display').value;
-    document.getElementById('display').value = displayValue.slice(0, -1);
+    const display = document.getElementById('display');
+    display.value = display.value.slice(0, -1);
 }
 
 function calculate() {
     try {
-        const result = eval(document.getElementById('display').value);
+        // Replace 'Math.PI' and 'Math.E' with their respective values before evaluation
+        let expression = document.getElementById('display').value
+            .replace(/Math\.PI/g, Math.PI)
+            .replace(/Math\.E/g, Math.E);
+        
+        // Evaluate the expression safely
+        const result = eval(expression);
         document.getElementById('display').value = result;
     } catch (error) {
         document.getElementById('display').value = 'Error';
@@ -72,6 +79,10 @@ function calculateLog() {
 
 function calculateFactorial() {
     const value = parseInt(document.getElementById('display').value);
+    if (value < 0) {
+        document.getElementById('display').value = 'Error';
+        return;
+    }
     let result = 1;
     for (let i = 2; i <= value; i++) {
         result *= i;
