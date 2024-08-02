@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>3D Calculator</title>
+       <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="calculator">
@@ -24,7 +24,7 @@
             <button onclick="appendToDisplay('*')">×</button>
             <button onclick="appendToDisplay('/')">÷</button>
             <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="calculate()">=</button>
+            <button onclick="calculate()" class="equal">=</button>
             <button onclick="appendToDisplay('.')">.</button>
             <button onclick="appendToDisplay('(')">(</button>
             <button onclick="appendToDisplay(')')">)</button>
@@ -38,18 +38,14 @@
             <button onclick="calculateSec()">sec</button>
             <button onclick="calculateCosec()">cosec</button>
             <button onclick="calculateLog()">log</button>
-           
             <button onclick="calculateNaturalLog()">ln</button>
             <button onclick="calculateFactorial()">!</button>
             <button onclick="appendToDisplay('Math.PI')">π</button>
             <button onclick="appendToDisplay('Math.E')">e</button>
-      
-     
-            <button onclick="removeLastCharacter()"class="remove">⌫</button>
-            <button onclick="clearDisplay()"class="remove">C</button>
+            <button onclick="removeLastCharacter()" class="remove">⌫</button>
+            <button onclick="clearDisplay()" class="remove">C</button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
