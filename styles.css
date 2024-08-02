@@ -1,73 +1,113 @@
-/* Base styles */
-.calculator {
-    max-width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 15px;
-    background: #a6a6a6; /* Light gray background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Outer shadow effect */
-}
-
-.display {
-    width: 99%;
-    margin-bottom: 10px;
-    padding: 15px;
-    font-size: 24px;
-    border: none;
-    border-radius: 10px;
-    background: #e6e6e6; /* Light gray background for display */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Inner shadow effect */
-    color: #333; /* Text color for display */
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns for buttons */
-    gap: 10px;
-}
-
-.button {
-    padding: 15px;
-    font-size: 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    background: #d9d9d9; /* Lighter gray background for buttons */
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
-    transition: all 0.3s ease; /* Smooth transition on hover */
-}
-
-button.remove {
-    background: #ff6666; /* Red color for remove button */
-    color: white;
-    font-weight: bold;
-    width: calc(50% - 5px); /* Set width to fit 50% of the calculator with spacing */
-    margin-right: 5px; /* Add some spacing between buttons */
-display: grid;
-    grid-template-columns: repeat(2, 1fr); /* two columns for buttons */
-  
-}
-
-@media (max-width: 768px) {
-    .calculator {
-        max-width: 100%; /* Full width on smaller screens */
-    }
-    
-    .buttons {
-        grid-template-columns: repeat(3, 1fr); /* Three columns for buttons on smaller screens */
-    }
-    
-    .display {
-        font-size: 20px;
-    }
-
-    button {
-        font-size: 18px;
-    }
-
-    button.remove {
-        width: 100%; /* Full width for remove buttons on smaller screens */
-        margin-right: 0; /* No margin between remove buttons on smaller screens */
-        margin-bottom: 5px; /* Add some spacing between remove buttons and other buttons */
-    }
-}
+   /* Reset default margin and padding */
+   * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   }
+   
+   body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background: #e0e0e0; /* Light background for contrast */
+   font-family: Arial, sans-serif;
+   }
+   
+   .calculator {
+   width: 100%;
+   height: 100%;
+   
+   background: #ffffff; /* White background for a clean look */
+   border-radius: 0px; /* Rounded corners for a modern feel */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   }
+   
+   .display {
+   width: 100%;
+   height: 70px;
+   background: #333; /* Dark background for the display */
+   color: #fff;
+   text-align: right;
+   font-size: 2em;
+   border: none;
+   padding: 15px;
+   box-sizing: border-box;
+   border-radius: 0px 0px 0 0;
+   }
+   
+   .buttons {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 10px;
+   padding: 15px;
+   }
+   
+   button {
+   background: #f4f4f4; /* Light background for buttons */
+   border: 1px solid #ddd; /* Light border for button definition */
+   border-radius: 10px; /* Rounded corners for buttons */
+   color: #333; /* Dark text color for contrast */
+   font-size: 1.5em;
+   padding: 20px;
+   cursor: pointer;
+   transition: background 0.2s, box-shadow 0.2s;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+   }
+   
+   button:hover {
+   background: #e0e0e0; /* Slightly darker background on hover */
+   }
+   
+   button:active {
+   background: #ccc; /* Even darker background on click */
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Less shadow on click */
+   }
+   
+   /* Distinguish special buttons (e.g., remove, clear) */
+   button.remove {
+   background: #ff6f61; /* A distinct color for remove and clear */
+   color: white;
+   border: none; /* Remove border for special buttons */
+   }
+   
+   button.remove:hover {
+   background: #ff3d2e;
+   }
+   
+   button.remove:active {
+   background: #e03a27;
+   }
+   
+   button.equal {
+   background: #0000FF; /* A distinct color for remove and clear */
+   color: white;
+   border: none; /* Remove border for special buttons */
+   }
+   
+   button.equal:hover {
+   background: #ff3d2e;
+   }
+   
+   button.equal:active {
+   background: #e03a27;
+   }
+   @media (max-width: 600px) {
+   .calculator {
+   width: 100%;
+   box-shadow: none;
+   }
+   
+   .buttons {
+   grid-template-columns: repeat(4, 1fr);
+   }
+   
+   button {
+   font-size: 1.2em;
+   padding: 15px;
+   }
+   }
+   
